@@ -1,0 +1,53 @@
+import java.util.*;
+import java.math.*;
+
+public class BigInteger {
+	 public static void main(String[] args) {
+	        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+	        Scanner in = new Scanner(System.in);
+	        int testCases=in.nextInt();
+	        while(testCases>0){
+	            String str=in.next();
+	            boolean bool=isParenthesisMatch(str);
+	        	if(bool==true){
+	                System.out.println("YES");
+	            }
+	            else{
+	                System.out.println("NO");
+	            }
+	           testCases--;
+	        }
+	    }
+	    
+	    public static boolean isParenthesisMatch(String str) {
+	       if(str.isEmpty())
+	    	   return true;
+	    	
+	    	Stack<Character> stack=new Stack<Character>();
+	        for(int i=0;i<str.length();i++){
+	            char current=str.charAt(i);
+	            if(current=='{'||current=='['||current=='('||current=='<'){
+	            	System.out.println("Current:"+current);
+	            	stack.push(current);
+	            }
+
+	            if(current=='}'||current==']'||current==')'||current=='>'){
+	            	System.out.println("Current:"+current);
+	            	if(stack.isEmpty()){
+	                	System.out.println("Subir");
+	                    return false;
+	                }
+	                char last=stack.peek();
+	                System.out.println("last:"+last);
+	                if(current=='}' && last=='{' || current==']' && last=='[' ||current==')' && last=='(' ||current=='>' && last=='<'){
+	                    stack.pop();
+	                }
+	                else{
+	                	System.out.println("Subir1");
+	                    return false;
+	                } 		
+	            }
+	        }
+	        return stack.isEmpty();
+	    }
+}

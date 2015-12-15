@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+
+public class PlusMinus {
+	public static void main(String args[]){
+        Scanner scn=new Scanner(System.in);
+        String line= scn.next();
+        final char [] m=line.toCharArray(); 
+        System.out.println(m[1]);
+        
+        char character='z';
+        int ascii=(int)character;
+        System.out.println(ascii);
+        
+       // 97
+        
+//        Hashtable<Character,Integer> MYHASH = new Hashtable<Character,Integer>() {{
+//            
+//        	put(m[0],      1);
+//         }};
+//         System.out.println(MYHASH.get(m[0]));
+	}
+}

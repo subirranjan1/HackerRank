@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class BigInteger {
+	public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int sum=factorial(n);
+        System.out.println(sum);
+    }
+    public static int factorial(int n){
+    	int result;
+    	if(n==0 || n==1){
+    		return 1;
+    	}
+    	else{
+    		result=n*factorial(n-1);
+    		return result;
+    	}
+    }
+}

@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+
+public class PlusMinus {
+	public static void main(String args[]){
+        Scanner scn=new Scanner(System.in);
+        String line= scn.next();
+        char [] m=line.toCharArray(); 
+        System.out.println(m[1]);
+        
+        Hashtable<String,Integer> MYHASH = new Hashtable<String,Integer>() {{
+            put("foo",      1);
+            put("bar",      256);
+            put("data",     3);
+            put("moredata", 27);
+            put("hello",    32);
+            put("world",    65536);
+         }};
+         System.out.println(MYHASH.get("foo"));
+	}
+}

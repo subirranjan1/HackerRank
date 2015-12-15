@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+
+public class PlusMinus {
+	public static void main(String args[]){
+        Scanner scn=new Scanner(System.in);
+        String line= scn.nextLine();
+        final char [] m=line.toCharArray(); 
+        HashMap<Integer,Boolean> MYHASH = new HashMap<Integer,Boolean>();
+        for(int i=97;i<=122;i++){
+        	MYHASH.put(i, false);
+        }
+        for(int i=0;i<m.length;i++){
+        	//System.out.println(Character.toLowerCase(m[i]));
+        	char key=Character.toLowerCase(m[i]); 
+        	int ascii=(int)key;
+        	MYHASH.put(ascii, true);
+        }
+        
+        for(int key: MYHASH.keySet()){
+        	if(MYHASH.get(key)==false){
+        		System.out.println("Not Pangram");
+        		return;
+        	}
+        }   
+        System.out.println("Pangram");	//return;
+	}
+}

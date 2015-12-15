@@ -1,0 +1,12 @@
+import java.io.*;
+import java.util.*;
+
+
+public class PlusMinus {
+	public static void main(String args[]){
+        Scanner scn=new Scanner(System.in);
+        String line= scn.next();
+        char [] m=line.toCharArray(); 
+        System.out.println(m[1]);
+	}
+}

@@ -1,0 +1,21 @@
+import java.util.Scanner;
+import java.math.*;
+
+public class BigInteger {
+	public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        java.math.BigInteger n = in.nextBigInteger();
+        java.math.BigInteger sum=factorial(n);
+        System.out.println(sum);
+    }
+    public static java.math.BigInteger factorial(java.math.BigInteger n){
+    	java.math.BigInteger result;
+    	if(n==java.math.BigInteger.ZERO || n==java.math.BigInteger.ONE){
+    		return java.math.BigInteger.ONE;
+    	}
+    	else{
+    		result=n.multiply(factorial(n.subtract(java.math.BigInteger.ONE)));
+    		return result;
+    	}
+    }
+}
