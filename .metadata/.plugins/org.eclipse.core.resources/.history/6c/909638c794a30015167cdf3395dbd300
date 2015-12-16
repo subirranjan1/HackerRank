@@ -1,0 +1,12 @@
+
+public class Fibonacci {
+	public static void main(String args[]){
+		int n=12;
+		printFibonaci(12);
+	}
+	public static void printFibonaci(int n){
+		for(int i=0;i<n;i++){
+			
+		}
+	}
+}
