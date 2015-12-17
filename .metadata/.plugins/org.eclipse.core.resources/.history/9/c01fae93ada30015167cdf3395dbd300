@@ -1,0 +1,34 @@
+import java.util.*;
+import java.io.*;
+
+public class PalindromeIndex {
+	public static void main(String args[]){
+        scanner in=new scanner(System.in);
+        int testCases=in.nextInt();
+		String str="aaab";
+		System.out.println(checkPalindromeIndex(str));
+		
+	}
+	
+	public static int checkPalindromeIndex(String str){
+		
+		if(str.isEmpty()){
+			return -1;
+		}
+
+		int n=str.length();
+		int j=n-1;
+		int pos=-1;
+		for(int i=0;i<(n/2);i++,j--){
+			if(str.charAt(i)!=str.charAt(j)){
+				if(str.charAt(i+1)==str.charAt(j)){
+					pos=i;
+				}
+				else{
+					pos=j;
+				}	
+			}
+		}
+		return pos;
+	}
+}
